@@ -1,11 +1,4 @@
 describe("GoogleSheetToObjectConverter", function() {
-  // SHEET-URL			https://docs.google.com/spreadsheets/d/1BH3TzJ-GH-Syx9dGb1tBQpMq4atVFPFwnq3hGlgFL38/edit#gid=0
-  // SHEET-ID			1BH3TzJ-GH-Syx9dGb1tBQpMq4atVFPFwnq3hGlgFL38
-  // published to 		https://docs.google.com/spreadsheets/d/e/2PACX-1vQPcxnXj7ikAZ77Zx5hRdAwXvWzXScN_jvdGmTpeA_YLtdn55mDk7xH1MTX-UmwtYPN2cmcs11Gqt2R/pubhtml
-  // CSV-Template URL   https://docs.google.com/spreadsheets/d/<KEY>/export?format=csv&id=<KEY>&gid=<GID>
-  // CSV-URL 			https://docs.google.com/spreadsheets/d/e/2PACX-1vQPcxnXj7ikAZ77Zx5hRdAwXvWzXScN_jvdGmTpeA_YLtdn55mDk7xH1MTX-UmwtYPN2cmcs11Gqt2R/pub?output=csv
-  // JSON-Template URL 	https://spreadsheets.google.com/feeds/cells/YOURGOOGLESHEETCODE/SHEETPAGENUMBER/public/full?alt=json
-  // JSON-URL			https://spreadsheets.google.com/feeds/cells/1BH3TzJ-GH-Syx9dGb1tBQpMq4atVFPFwnq3hGlgFL38/1/public/full?alt=json
   	var converter
     beforeEach(function() {
       converter = new GoogleSheetToObjectConverter()
