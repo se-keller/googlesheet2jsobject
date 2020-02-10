@@ -8,8 +8,8 @@ describe("GoogleSheetToObjectConverter", function() {
       var json = {
         feed: {
           entry: [
-            {gs$cell: {row: "1", col: "1", inputValue: "TEST_HEADER"}},
-            {gs$cell: {row: "2", col: "1", inputValue: "TEST_VALUE"}}
+            {gs$cell: {row: "1", col: "1", $t: "TEST_HEADER"}},
+            {gs$cell: {row: "2", col: "1", $t: "TEST_VALUE"}}
           ]
         }
       }
@@ -22,11 +22,10 @@ describe("GoogleSheetToObjectConverter", function() {
       var json = {
         feed: {
           entry: [
-            {gs$cell: {row: "2", col: "1", inputValue: "TEST_VALUE"}}
+            {gs$cell: {row: "2", col: "1", $t: "TEST_VALUE"}}
           ]
         }
       }
       expect(function(){converter.convertGooglSheetJsonToJsObject(json)}).toThrowError("incorrect formated sheet: no cells without header (first row)")
     });
-
 })

@@ -40,6 +40,12 @@ function GoogleSheetToObjectConverter() {
 		this.convertFromUrl(url, callback)
 	}
 
+   /**
+    * Convert the cells of a published GoogleSheet to an JS-Object/Dictionary
+    * 
+    * @param spreadsheetUrl {String} The Google Sheet Url in the format https://spreadsheets.google.com/feeds/cells/<SHEET_ID>/<TAB_NR>/public/values?alt=json
+    * @param callback 		{String} the callback function with the values as parameter
+    */
 	this.convertFromUrl = function(spreadsheetUrl, callback) {
 		var parent = this
 		$.getJSON(spreadsheetUrl, function(json){		
@@ -51,7 +57,7 @@ function GoogleSheetToObjectConverter() {
 		var header = {}
    		var rowEntries = {}
    		for(var position in json["feed"]["entry"]) {
-   			var cellValue = json["feed"]["entry"][position]["gs$cell"]["inputValue"]
+   			var cellValue = json["feed"]["entry"][position]["gs$cell"]["$t"]
    			var cellRow = json["feed"]["entry"][position]["gs$cell"]["row"]
    			var cellCol = json["feed"]["entry"][position]["gs$cell"]["col"]
 
