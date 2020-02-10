@@ -1,6 +1,6 @@
 # googlesheet2jsobject
 
-__Converts the cells of a published GoogleSheet to an JS-Object/JS-Dictionary__
+__Converts the cells of a published GoogleSheet to a JavaScript-Object/JavaScript-Dictionary__
 
   column-name1|column-name2
   ------------|------------
