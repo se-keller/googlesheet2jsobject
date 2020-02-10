@@ -39,7 +39,7 @@ __Converts the cells of a published GoogleSheet to an JS-Object/JS-Dictionary__
   var sheetId = "<the_sheet_id_of_the_published_sheet>"
   var tabNr = <the_number_of_the_tab_of_the_sheet_of_the_values>
   var dictionary = new GoogleSheetToObjectConverter().convert(sheetId, tabNr, function(values){
-     console.log(values[2][column-name1])
+     console.log(values[2]["column-name1"])
   })
   ```
 

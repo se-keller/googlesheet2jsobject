@@ -23,7 +23,7 @@
  * var sheetId = "<the sheet id of the published sheet>"
  * var tabNr = <the number of the tab of the sheet of the values>
  * var dictionary = new GoogleSheetToObjectConverter().convert(sheetId, tabNr, function(values){
- *    console.log(values[2][column-name1])
+ *    console.log(values[2]["column-name1"])
  * })
  */
 function GoogleSheetToObjectConverter() {
