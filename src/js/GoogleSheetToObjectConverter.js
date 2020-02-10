@@ -36,8 +36,13 @@ function GoogleSheetToObjectConverter() {
 	 * @param callback 		{String} the callback function with the values as parameter
 	 */
 	this.convert = function(spreadsheetId, tabNr, callback) {
+		var url = "https://spreadsheets.google.com/feeds/cells/"+spreadsheetId+"/"+tabNr+"/public/full?alt=json"
+		this.convertFromUrl(url, callback)
+	}
+
+	this.convertFromUrl = function(spreadsheetUrl, callback) {
 		var parent = this
-		$.getJSON("https://spreadsheets.google.com/feeds/cells/"+spreadsheetId+"/"+tabNr+"/public/full?alt=json", function(json){		
+		$.getJSON(spreadsheetUrl, function(json){		
 			callback(parent.convertGooglSheetJsonToJsObject(json));	
 	  	})
 	}

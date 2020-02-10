@@ -34,10 +34,6 @@ describe("GoogleSheetToObjectConverter", function() {
         }
       }
       expect(function(){converter.convertGooglSheetJsonToJsObject(json)}).toThrowError("incorrect formated sheet: no cells without header (first row)")
-      converter.convert("1BH3TzJ-GH-Syx9dGb1tBQpMq4atVFPFwnq3hGlgFL38", 1, function(object){
-        console.log(object)
-      })
-      
     });
 
 })
