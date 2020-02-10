@@ -29,7 +29,7 @@
 function GoogleSheetToObjectConverter() {
 	
 	/**
-	 * Convert the cells of a puglished GoogleSheet to an JS-Object/Dictionary
+	 * Convert the cells of a published GoogleSheet to an JS-Object/Dictionary
 	 *
 	 * @param spreadsheetId {String} The sheet id of the published sheet
 	 * @param tabNr 		{String} The number of the tab of the sheet of the values
